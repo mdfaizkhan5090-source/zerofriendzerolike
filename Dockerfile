@@ -2,6 +2,12 @@ FROM php:8.2-cli
 
 WORKDIR /app
 
+# Install system dependencies required for pdo_sqlite
+RUN apt-get update && apt-get install -y \
+    libsqlite3-dev \
+    pkg-config \
+    && rm -rf /var/lib/apt/lists/*
+
 # Install required extensions
 RUN docker-php-ext-install pdo pdo_sqlite
 
