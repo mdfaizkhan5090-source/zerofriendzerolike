@@ -4,7 +4,6 @@ define('DB_PATH', __DIR__ . '/database.db');
 
 // ── REAL LIKE API ────────────────────────────────────────────────────────
 define('LIKE_API_URL', 'https://free-fire-like-api-opal.vercel.app/like');
-
 // Optional key (leave empty)
 define('LIKE_API_KEY', '');
 
